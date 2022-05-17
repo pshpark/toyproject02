@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* reset */
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ background:#f8f6f4; }
+h1,h2,h3,h4,h5{ font-family: 'Playfair Display', serif; }
+html,body,div,p,span,button,input{ font-family: 'Work Sans', sans-serif; font-size:18px; font-weight:300; }
+table{ border-collapse:collapse; }
+button{ background:none; border:none; cursor:pointer; }
+input{ background:none; border:none; padding:0; margin:0; font-size:16px; }
+input::placeholder{ color:#010101; }
+button:focus, a:focus, input:focus, textarea:focus{outline:none;}
+ol,ul{ list-style: none; }
+a{ color:#010101; text-decoration:none; }
+img{ width:100%; display: inherit; vertical-align:top; }
+select{ background:none; border:none; font-family: 'Work Sans', sans-serif; font-size:16px; cursor:pointer; }
+select:focus{ outline:none; }
+select{ height:30px; padding-right:30px; background: url(../images/angle-down-solid.svg) no-repeat right; background-size:20px 20px; font-size:0.95em; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+select::-ms-expand { display: none; }
+b{ font-weight:500; }
+.fa-long-arrow-right:before{ display:inline-flex; height:22px; align-items:center; line-height:1; }
+.chkBox{ position:relative; cursor: pointer; }
+.chkBox span{ padding-left:25px; line-height:1; }
+.chkBox::before{ content:''; display:inline-block; position:absolute; top:50%; left:0; width:15px; height:15px; border:1px solid #000; transform:translateY(-50%); font-size:15px; }
+
+/* svg 파일 사용할 경우*/
+/* .chkBox.on::before{ background:url("../images/check-solid.svg") center no-repeat; background-size:cover; } */
+
+/* 유니코드 사용할 경우 */
+.chkBox.on::before{ content:'\f00c'; font-family:"Font Awesome 5 Free"; font-weight:900; }
+
+.chkBox input[type="radio"]{ display:none; }
+::-webkit-scrollbar{ width:6px; height:6px; }
+::-webkit-scrollbar-thumb{ background-color: #d6c8bb; border-radius:12px; background-clip:border-box; -webkit-border-radius:12px; -moz-border-radius:12px; -ms-border-radius:12px; -o-border-radius:12px; }
+::-webkit-scrollbar-track{ background-color: transparent; border-radius:0; -webkit-border-radius:0; -moz-border-radius:0; -ms-border-radius:0; -o-border-radius:0; }
